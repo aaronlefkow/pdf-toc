@@ -10,7 +10,7 @@ function modifySharePointLink(link) {
         // Remove text after ".pdf"
         const finalLink = modifiedLink.replace(/\.pdf.*/, ".pdf");
         
-        return decodeURIComponent(modifiedLink);
+        return decodeURIComponent(finalLink);
     }
     
     // Scenario 2: If the link has "Forms/AllItems.aspx?id="
@@ -24,7 +24,7 @@ function modifySharePointLink(link) {
         // Remove text after ".pdf"
         const finalLink = modifiedLink.replace(/\.pdf.*/, ".pdf");
         
-        return decodeURIComponent(modifiedLink);
+        return decodeURIComponent(finalLink);
     }
     
     // Return unmodified link if none of the scenarios match
