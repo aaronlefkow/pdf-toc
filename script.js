@@ -29,6 +29,9 @@ function replaceSpacesWithPercent20(link) {
     // Replace spaces with %20
     link = link.replace(/\s/g, '%20');
 
+    // Replace # with %23
+    link = link.replace(/#/g, '%23');
+
     // Truncate everything after .pdf
     link = link.replace(/\.pdf.*/, '.pdf');
 
