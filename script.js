@@ -21,6 +21,14 @@ function modifyUrl() {
     // Combine the base URL with the modified specific part
     const modifiedUrl = baseUrl + specificPart;
 
-    // Display the modified URL
-    document.getElementById("outputUrl").textContent = modifiedUrl;
+    // Create an <a> element
+    const linkElement = document.createElement("a");
+    linkElement.href = modifiedUrl;
+    linkElement.target = "_blank"; // Open in a new tab
+    linkElement.textContent = modifiedUrl;
+
+    // Clear previous content and append the <a> element
+    const outputUrlElement = document.getElementById("outputUrl");
+    outputUrlElement.innerHTML = "";
+    outputUrlElement.appendChild(linkElement);
 }
