@@ -6,6 +6,9 @@ function modifySharePointLink(link) {
         
         // Remove text including and after "&parent"
         const modifiedLink = step1.replace(/&parent.*/, "");
+
+        // Remove text after ".pdf"
+        const finalLink = modifiedLink.replace(/\.pdf.*/, ".pdf");
         
         return decodeURIComponent(modifiedLink);
     }
@@ -17,6 +20,9 @@ function modifySharePointLink(link) {
         
         // Remove text including and after "&parent"
         const modifiedLink = step1.replace(/&parent.*/, "");
+
+        // Remove text after ".pdf"
+        const finalLink = modifiedLink.replace(/\.pdf.*/, ".pdf");
         
         return decodeURIComponent(modifiedLink);
     }
