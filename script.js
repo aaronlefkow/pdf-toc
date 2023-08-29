@@ -20,6 +20,9 @@ function modifyUrl() {
 
     // Combine the base URL with the modified specific part
     const modifiedUrl = baseUrl + specificPart;
+    
+    // Open the modified URL in a new tab
+    window.open(modifiedUrl, "_blank");
 
     // Create an <a> element
     const linkElement = document.createElement("a");
